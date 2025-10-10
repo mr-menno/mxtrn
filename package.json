@@ -3,16 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test-e2e": "playwright test"
+    "test-e2e": "playwright test",
+    "test": "npm run dev & wait-on http://localhost:3002 && npm run test-e2e"
   },
   "dependencies": {
+    "@playwright/test": "^1.56.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "start-server-and-test": "^2.1.2",
+    "wait-on": "^9.0.1"
   },
   "devDependencies": {
     "eslint": "latest",
