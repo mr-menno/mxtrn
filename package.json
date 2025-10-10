@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@playwright/test": "^1.56.0",
+    "clsx": "^2.1.1",
     "next": "latest",
     "react": "latest",
     "react-confetti": "^6.4.0",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
