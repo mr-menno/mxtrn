@@ -1,9 +1,10 @@
-import Head from 'next/head';
+"use client";
+
 import { useState, useEffect } from 'react';
 import Game from '../components/Game';
 import Leaderboard from '../components/Leaderboard';
 
-export default function Home() {
+export default function Page() {
   const [gameData, setGameData] = useState(null);
 
   useEffect(() => {
@@ -35,18 +36,14 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Mexican Train Scorekeeper</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main>
-        <h1>Mexican Train Scorekeeper</h1>
+      <main className="container mx-auto py-8">
+        <h1 className="text-5xl font-extrabold text-center mb-8 drop-shadow-lg">Mexican Train Scorekeeper</h1>
         <Game gameData={gameData} setGameData={setGameData} />
         <Leaderboard leaderboard={gameData.leaderboard} />
       </main>
 
-      <footer>
+      <footer className="text-center mt-8 text-gray-200">
         Powered by Next.js
       </footer>
     </div>
