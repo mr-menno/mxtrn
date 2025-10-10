@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Game from '../components/Game';
+import Leaderboard from '../components/Leaderboard';
 
 export default function Home() {
   const [gameData, setGameData] = useState(null);
