@@ -7,4 +7,4 @@ As Gemini, when working on this project, always adhere to the following Git work
 3.  **Commit:** After completing a logical unit of work, commit your changes with a clear and concise commit message.
 4.  **Push:** After committing, push your changes to the remote repository.
 
-you can test with `npm build` but do not try and run the server or use playwrigth.
+you can test with `npm run build` but do not try and run the server or use playwrigth.
