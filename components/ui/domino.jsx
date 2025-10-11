@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Domino = ({ value1, value2, size = 40, className = '' }) => {
-  const pipSize = size / 8;
-  const pipOffset = size / 4;
+  const halfSize = size / 2;
+  const pipSize = halfSize / 4;
+  const pipOffset = halfSize / 2;
 
   const renderPips = (value) => {
     const pips = [];
@@ -21,8 +22,8 @@ const Domino = ({ value1, value2, size = 40, className = '' }) => {
       pips.push(
         <circle
           key={index}
-          cx={size / 4 + x * pipOffset}
-          cy={size / 4 + y * pipOffset}
+          cx={halfSize / 2 + x * pipOffset}
+          cy={halfSize / 2 + y * pipOffset}
           r={pipSize}
           fill="black"
         />

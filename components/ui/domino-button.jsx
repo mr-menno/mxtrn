@@ -7,7 +7,7 @@ const DominoButton = ({ value1, value2, onClick, isSelected, ...props }) => {
     <Button
       variant={isSelected ? "default" : "outline"}
       onClick={onClick}
-      className="p-1 h-auto w-auto"
+      className="p-1 h-auto w-full"
       {...props}
     >
       <Domino value1={value1} value2={value2} size={30} />
