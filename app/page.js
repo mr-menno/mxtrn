@@ -151,6 +151,7 @@ export default function Page() {
                     <label className="w-1/3">{player}:</label>
                     <Input
                       type="number"
+                      inputMode="numeric"
                       value={currentRoundScores[player]}
                       onChange={(e) => handleScoreChange(player, e.target.value)}
                       className="w-2/3"
