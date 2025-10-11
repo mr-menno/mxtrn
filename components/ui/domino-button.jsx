@@ -10,7 +10,7 @@ const DominoButton = ({ value1, value2, onClick, isSelected, ...props }) => {
       className="p-1 h-auto w-full"
       {...props}
     >
-      <Domino value1={value1} value2={value2} size={30} />
+      <Domino value1={value1} value2={value2} size={40} />
     </Button>
   );
 };
