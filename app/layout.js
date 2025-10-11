@@ -1,4 +1,5 @@
 import './globals.css';
+import { GameProvider } from '../lib/game-context';
 
 export const metadata = {
   title: 'Mexican Train Scorekeeper',
@@ -8,8 +9,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-background text-foreground min-h-screen p-4">
-        {children}
+      <body>
+        <GameProvider>
+          <body className="bg-background text-foreground min-h-screen p-4">
+            {children}
+          </body>
+        </GameProvider>
       </body>
     </html>
   );

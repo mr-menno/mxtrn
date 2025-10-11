@@ -13,6 +13,7 @@ This document outlines the functional and technical requirements for the Mexican
 
 ### 2.2 Data Persistence
 - **Local Storage:** All game data (double dominoes used, round winners, player scores, leaderboard) must be persisted using browser local storage.
+- ability to clear local storage, and all previous logins.
 
 ### 2.3 Leaderboard
 - **Display:** The application must display a leaderboard showing overall player performance.
@@ -28,6 +29,8 @@ This document outlines the functional and technical requirements for the Mexican
 - Intuitive and easy-to-use interface for entering scores.
 - Clear display of current round information and the leaderboard.
 - Responsive design for various screen sizes.
+- **Dominoes**: create a custom svg component, a dominos button component  
+- **Starting Dominoe**: starting domino for the round shoudl be selected as a botton, and only for the remaining options
 
 ## 5. Future Considerations (Out of Scope for initial version)
 - Multi-game tracking.
