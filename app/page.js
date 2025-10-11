@@ -16,9 +16,11 @@ export default function Page() {
   useEffect(() => {
     // Initialize currentRoundScores when players change or a new round starts
     const initialScores = {};
-    players.forEach(player => {
-      initialScores[player] = ''; // Use empty string for initial input state
-    });
+    if (players && Array.isArray(players)) {
+      players.forEach(player => {
+        initialScores[player] = ''; // Use empty string for initial input state
+      });
+    }
     setCurrentRoundScores(initialScores);
   }, [players, rounds.length]); // Depend on players and rounds.length to re-initialize for new rounds
 
@@ -59,7 +61,9 @@ export default function Page() {
       recordRoundScores(scoresToRecord);
       // Reset scores for next round
       const resetScores = {};
-      players.forEach(player => resetScores[player] = '');
+      if (players && Array.isArray(players)) {
+        players.forEach(player => resetScores[player] = '');
+      }
       setCurrentRoundScores(resetScores);
     } else {
       alert('Please enter scores for all players.');

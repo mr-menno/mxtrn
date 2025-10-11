@@ -16,7 +16,8 @@ const Domino = ({ value1, value2, size = 40, className = '' }) => {
       6: [[-1, -1], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 1]],
     };
 
-    positions[value].forEach(([x, y], index) => {
+    const pipsToRender = positions[value] || [];
+    pipsToRender.forEach(([x, y], index) => {
       pips.push(
         <circle
           key={index}
